@@ -74,8 +74,8 @@ GLuint load_texture(const char* filepath)
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+ 
     
-    // STEP 4: Releasing our file from memory and returning our texture id
     stbi_image_free(image);
     
     return textureID;
@@ -102,14 +102,11 @@ void initialise()
     
     model_matrix = glm::mat4(1.0f);
     model_matrix_2 = glm::mat4(1.0f);
-    view_matrix = glm::mat4(1.0f);  // Defines the position (location and orientation) of the camera
-    projection_matrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);  // Defines the characteristics of your camera, such as clip planes, field of view, projection method etc.
+    view_matrix = glm::mat4(1.0f);
+    projection_matrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);
     
     program.SetProjectionMatrix(projection_matrix);
     program.SetViewMatrix(view_matrix);
-    // Notice we haven't set our model matrix yet!
-    
-//    program.SetColor(TRIANGLE_RED, TRIANGLE_BLUE, TRIANGLE_GREEN, TRIANGLE_OPACITY);
     
     glUseProgram(program.programID);
     

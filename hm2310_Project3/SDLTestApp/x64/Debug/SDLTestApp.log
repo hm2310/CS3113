@@ -1,0 +1,3 @@
+﻿  SDLTestApp.cpp
+D:\Work\SDLTestApp\SDLTestApp\SDLTestApp.cpp(77,19): warning C4018: “>”: 有符号/无符号不匹配
+  SDLTestApp.vcxproj -> D:\Work\SDLTestApp\x64\Debug\SDLTestApp.exe
